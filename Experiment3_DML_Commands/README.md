@@ -45,125 +45,168 @@ Used to retrieve records from a table.
 ```sql
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
+
 **Question 1**
---
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/04818378-2dc9-467d-b614-2b63c9d77feb)
+
+
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Customers(CustomerID  ,Name, Address, Email)
+SELECT CustomerID ,Name ,Address, Email FROM Old_customers;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/26a3e5cf-fcff-496d-b32c-02d3158238ff)
+
 
 **Question 2**
----
--- Paste Question 2 here
+
+![image](https://github.com/user-attachments/assets/23eb6657-a5ba-4144-a0d0-7c3cc89457c8)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+UPDATE products
+SET product_name = 'Grapefruit'
+WHERE product_id =4;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/473aa9d8-5ec3-449f-8dbb-7ade5898f043)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![image](https://github.com/user-attachments/assets/1c342715-8111-4015-b9c6-8e15a43bbba3)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+DELETE FROM surgeries
+WHERE  surgery_id =3;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/e5f9ae34-2171-4670-a28f-f73cf7d7e2fe)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/d7a1226e-45a4-4636-824d-fec9e7140f7b)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT customer_id, cust_name, city, grade, salesman_id
+FROM  customer
+WHERE  grade >100;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/96fd5275-4a92-4c69-9388-7af795b53147)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/d8f79995-752c-4e1b-a92e-6557b54fb687)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT ename,hiredate,DATE(hiredate ,'+100 Days') AS DateAfter100Days
+FROM emp;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/428fb821-40c4-4cd4-8734-85239ffb183a)
 
 **Question 6**
----
--- Paste Question 6 here
+
+![image](https://github.com/user-attachments/assets/65985934-6989-416a-b18d-a26c423a101e)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT id,ROUND(decimal,3) AS  rounded_value
+FROM Calculations;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/dcec3256-8c1f-4496-a356-70756b822ad5)
 
 **Question 7**
----
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/0e8354b2-cb3e-4e10-b7ce-ff50a4f80610)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+DELETE FROM Customer
+WHERE LENGTH(CUST_NAME) =6;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/f380fb09-c29e-4619-b906-56c290a4ff4f)
 
-![Output7](output.png)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/b2748d5f-71c2-44bc-90ae-cb372f889ea0)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+UPDATE Employees 
+SET salary = 8000
+WHERE employee_id =105 AND salary < 5000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/eb5e4fa9-43a2-4a7d-b464-20bf09d12b18)
+
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/01e04d07-8b7f-43ba-b971-571584953176)
+
+
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT id, value1, 
+        CASE 
+           WHEN  value1 >50 THEN 'High'
+           ELSE 'Low'
+        END AS  value_category
+FROM Calculations;
+
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/4eb27299-6f8c-4ca6-a580-e445046e2cde)
 
-![Output9](output.png)
 
 **Question 10**
----
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/eda03365-733c-4036-b7d5-29808868d5a4)
+
+
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT 
+    product_id, 
+    original_price, 
+    discount_percentage,
+    original_price *discount_percentage AS discount_amount
+FROM 
+    products
+WHERE  
+    original_price * discount_percentage >50;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/8da24314-14bd-4d94-8487-b65d193c7f1e)
 
-![Output10](output.png)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
+
+![image](https://github.com/user-attachments/assets/557dbc8d-28d6-4388-8055-b18f80f8527f)
+
