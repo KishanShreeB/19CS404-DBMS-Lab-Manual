@@ -37,125 +37,168 @@ HAVING condition;
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/695a7f01-aed4-4858-a301-d961b73cde77)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+select date(AppointmentDateTime) as AppointmentDate, count(*) as  TotalAppointments
+from Appointments
+group by AppointmentDate;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/b14f88a1-c1a9-42d0-bae4-d882657f1e57)
 
 **Question 2**
----
--- Paste Question 2 here
+
+![image](https://github.com/user-attachments/assets/2e75ee22-7f6f-45ac-b98d-3faf73b4bb6e)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+select name,email,length(email) as  min_email_length
+from customer
+order by length(email)
+limit 1;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/1d545d0b-2f70-4403-a615-588e5b261299)
 
 **Question 3**
----
--- Paste Question 3 here
+
+![image](https://github.com/user-attachments/assets/4eca07ed-0e28-4b09-a3f1-a3d15346c968)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+select avg(length(email)) as avg_email_length
+from customer
+order by length(email)
+limit 1;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/5560d51e-31f3-4500-bd99-321dd1b9db92)
 
 **Question 4**
----
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/4b5ae2fc-930c-4be4-836b-9e441908948a)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+select sum(purch_amt) as TOTAL
+from orders
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/34263e68-a303-4561-9604-fa121c78a36e)
 
 **Question 5**
----
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/97c38b68-e8eb-4fa0-99bf-65c6aa7751b7)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+select jdate,MIN(workhour)
+from employee1
+group by jdate
+having MIN(workhour) <10 ;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/ac3ea2f4-d55d-4f17-b67f-0b789dd289fb)
 
 **Question 6**
----
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/198f73fc-92bf-44dd-9270-a2d7653bff65)
+
+
 
 ```sql
--- Paste your SQL code below for Question 6
+select max(purch_amt) as MAXIMUM
+from orders
+order by purch_amt;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/d4a77ba2-8c60-4188-b40c-d58340e7b220)
+
 
 **Question 7**
----
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/0ee1bc64-51ff-4336-ac94-2782fd23dea1)
+
+
 
 ```sql
--- Paste your SQL code below for Question 7
+select address,AVG(salary)
+from customer1
+group by address
+having avg(salary) > 5000
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/8f3edd30-e9e8-4425-9de1-cff048369ae8)
 
 **Question 8**
----
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/fcb8ceab-b54a-433c-abb4-c6989c2be2cb)
+
+
 
 ```sql
--- Paste your SQL code below for Question 8
+select category_id,count(product_name)
+from products
+group by category_id
+having min(category_id) <3
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/cbad0c42-f896-4394-9484-bb338100342a)
 
-![Output8](output.png)
 
 **Question 9**
----
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/38219b0f-8f55-48e7-90e2-11e7d73c6579)
+
+
 
 ```sql
--- Paste your SQL code below for Question 9
+select sum(inventory) as total
+from fruits
+where unit ='LB'
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/22b88888-6959-4199-b37b-f510ed1e9567)
+
 
 **Question 10**
----
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/87ed7af8-d973-43c3-8a62-085fd3337951)
+
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select count(distinct salesman_id) as COUNT
+from orders
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/a84d3ab8-bb50-4ca5-8071-d218fb9f983e)
+
 
 
 ## RESULT
 Thus, the SQL queries to implement aggregate functions, GROUP BY, and HAVING clause have been executed successfully.
+
+![image](https://github.com/user-attachments/assets/76f13057-b2ba-4b90-a996-696d78163b66)
+
